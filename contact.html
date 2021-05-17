@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow+Semi+Condensed:wght@600;700&family=Barlow:wght@300;400;500;700;800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<a href="./index.html"><img src="./assets/images/logo.svg" alt="logo" /></a>
+				<div class="menu-btn">
+					<div class="line-1"></div>
+					<div class="line-2"></div>
+					<div class="line-3"></div>
+				</div>
+				<nav>
+					<ul>
+						<li>
+							<a class="active" data-link="Home" href="./index.html">Home</a>
+						</li>
+						<li>
+							<a data-link="About" href="./index.html#about">About</a>
+						</li>
+						<li>
+							<a data-link="Services" href="./index.html#services">Services</a>
+						</li>
+						<li>
+							<a data-link="Features" href="./index.html#features">Features</a>
+						</li>
+						<li>
+							<a href="./contact.html">
+								<div class="contact-btn">Contact Us</div>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+		<section class="contact-content">
+            
+			<div class="contact-container container">
+                <h1>Contact Us</h1>
+				<div class="contact-header">
+                    <p>Hey! Tell us about your requirements</p>
+                </div>
+                <div class="contact-form">
+                    <form action="" method="POST">
+                        <div>
+                            <div class="form-first-header">I'm interested in...</div>
+                            <!-- Do not make this light in weight and smooth -->
+                            <div class="form-first-content">
+                                <!-- make the theme of the capsules match with the theme of the website -->
+                                <label for="web-design">
+                                    <input id="web-design" type="checkbox" name="service[]" value="web-design">
+                                    <div class="checkbox-rounded button_su_border">
+                                        <span class="su_button_circle_border"></span>
+                                        <div class="button_su_inner_border">
+                                            <span class="button_text_container_border">
+                                                Web Design
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="app-design">
+                                    <input id="app-design" type="checkbox" name="service[]" value="app-design">
+                                    <div class="checkbox-rounded button_su_border">
+                                        <span class=" su_button_circle_border"></span>
+                                        <div class="button_su_inner_border">
+                                            <span class="button_text_container_border">
+                                                App Design
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="web-development">
+                                    <input id="web-development" type="checkbox" name="service[]"
+                                        value="web-development">
+                                    <div class="checkbox-rounded button_su_border">
+                                        <span class=" su_button_circle_border"></span>
+                                        <div class="button_su_inner_border">
+                                            <span class="button_text_container_border">
+                                                Web Development
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="ios-android-app-development">
+                                    <input id="ios-android-app-development" type="checkbox" name="service[]"
+                                        value="ios-android-app-development">
+                                    <div class="checkbox-rounded button_su_border">
+                                        <span class=" su_button_circle_border"></span>
+                                        <div class="button_su_inner_border">
+                                            <span class="button_text_container_border">
+                                                iOS/Android App Development
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="product-design">
+                                    <input id="product-design" type="checkbox" name="service[]" value="product-design">
+                                    <div class="checkbox-rounded button_su_border">
+                                        <span class=" su_button_circle_border"></span>
+                                        <div class="button_su_inner_border">
+                                            <span class="button_text_container_border">
+                                                Product Design
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="design-concept">
+                                    <input id="design-concept" type="checkbox" name="service[]" value="design-concept">
+                                    <div class="checkbox-rounded button_su_border">
+                                        <span class=" su_button_circle_border"></span>
+                                        <div class="button_su_inner_border">
+                                            <span class="button_text_container_border">
+                                                Design Concept
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="post-production">
+                                    <input id="post-production" type="checkbox" name="service[]"
+                                        value="post-production">
+                                    <div class="checkbox-rounded button_su_border">
+                                        <span class=" su_button_circle_border"></span>
+                                        <div class="button_su_inner_border">
+                                            <span class="button_text_container_border">
+                                                Post-Production and VFX
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="motion-graphics">
+                                    <input id="motion-graphics" type="checkbox" name="service[]"
+                                        value="motion-graphics">
+                                    <div class="checkbox-rounded button_su_border">
+                                        <span class=" su_button_circle_border"></span>
+                                        <div class="button_su_inner_border">
+                                            <span class="button_text_container_border">
+                                                Motion Graphics
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Add a label to the field -->
+                        <!-- Do not make this light in weight and smooth -->
+                        <div class="form-second">
+                            <div>
+                                <label for="name">Name:</label>
+                                <br>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <!-- Add a label to the field -->
+                            <!-- Do not make this light in weight and smooth -->
+                            <div>
+                                <label for="email">E-Mail ID:</label>
+                                <br>
+                                <input type="email" id="email" name="email" placeholder="Your email" required>
+                            </div>
+                            <!-- Add a label to the field -->
+                            <!-- Do not make this light in weight and smooth -->
+                            <div>
+                                <label for="description">Tell us about your project:</label>
+                                <br>
+                                <textarea rows="10" id="description" name="decription"
+                                    placeholder="Write a brief description of your project"></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- Do not make this light in weight and smooth -->
+                            <div class="form-third-heading">Project budget (USD)</div>
+                            <div class="form-third-content">
+                                <div class="form-third-container">
+                                    <input id="less5k" type="radio" name="budget" value="less5k">
+                                    <label for="less5k">
+                                        < 5,000 </label>
+                                </div>
+                                <div class="form-third-container">
+                                    <input id="5-10k" type="radio" name="budget" value="5-10k">
+                                    <label for="5-10k">
+                                        5-10k
+                                    </label>
+                                </div>
+                                <div class="form-third-container">
+                                    <input id="10-30k" type="radio" name="budget" value="10-30k">
+                                    <label for="10-30k">
+                                        10-30k
+                                    </label>
+                                </div>
+
+                                <div class="form-third-container">
+                                    <input id="30-50k" type="radio" name="budget" value="30-50k">
+                                    <label for="30-50k">
+                                        30-50k
+                                    </label>
+                                </div>
+                                <div class="form-third-container">
+                                    <input id="more50k" type="radio" name="budget" value="more50k">
+                                    <label for="more50k">
+                                        > 50,000
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-button ">
+                            <div class="button_su">
+                                <span class=" su_button_circle"></span>
+                                <button class="button_su_inner" type="submit">
+                                    <span class="button_text_container">
+                                        SUBMIT
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+		<script	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="./main.js"></script>
+	</body>
+</html>
