@@ -96,7 +96,7 @@ const typedTextSpan = document.querySelector(".animated-text");
 const cursorSpan = document.querySelector(".cursor");
 
 const textArray = [
-	"need technology to reveal the beauty of products",
+	"need tech to bring their ideas to life",
 	"believe in beautiful and smart design",
 	// "need to build complex projects",
 	"are striving for quality at all stages",

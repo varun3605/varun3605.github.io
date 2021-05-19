@@ -11,6 +11,7 @@ body {
 
 .container {
 	padding: 2rem;
+	overflow: auto;
 }
 
 /* HEADER */
@@ -30,6 +31,10 @@ header {
 
 header.white-bg {
 	background-color: white;
+}
+
+header .logo {
+	width: 90%;
 }
 
 .menu-btn {
@@ -164,9 +169,14 @@ main {
 }
 
 .home-animation {
-	height: 400px;
-	width: 400px;
-	margin: auto;
+	height: 56.25vw;
+	width: 100vw;
+	margin: -2rem;
+}
+
+.text {
+	position: absolute;
+	top: 65vw;
 }
 
 .static-text {
@@ -182,7 +192,7 @@ main {
 .animated-text {
 	font-family: "Barlow";
 	font-weight: 800;
-	font-size: clamp(3.75rem, calc(1.9149vw + 3.15159375rem), 4.875rem);
+	font-size: clamp(2.6rem, calc(3.25vw + 1.95rem), 4.875rem);
 	line-height: 1.2em;
 	color: #0d0d0d;
 	margin: 0.25em auto 0.5em;
@@ -191,7 +201,7 @@ main {
 .cursor {
 	display: inline-block;
 	background: black;
-	font-size: clamp(3.75rem, calc(1.9149vw + 3.15159375rem), 4.875rem);
+	font-size: clamp(2.6rem, calc(3.25vw + 1.95rem), 4.875rem);
 	width: 4px;
 	border-radius: 2px;
 	animation: blink 1s infinite;
@@ -221,13 +231,13 @@ main {
 
 .cta {
 	position: absolute;
-	bottom: 17.5%;
+	bottom: 12.5%;
 }
 
 .cta a {
 	font-family: "Barlow Semi Condensed";
 	font-weight: 600;
-	font-size: 1.875rem;
+	font-size: 1.5rem;
 	line-height: 1.2em;
 	letter-spacing: 0.05em;
 	text-decoration: none;
@@ -244,7 +254,7 @@ section {
 section h5 {
 	font-family: "Barlow";
 	font-weight: 500;
-	font-size: 1.125rem;
+	font-size: clamp(1rem, calc(0.1786vw + 0.96428rem), 1.125rem);
 	line-height: 1.2em;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
@@ -255,7 +265,7 @@ section h5 {
 section h1 {
 	font-family: "Barlow";
 	font-weight: 800;
-	font-size: 4.875rem;
+	font-size: clamp(2.75rem, calc(3.0357vw + 2.14286rem), 4.875rem);
 	line-height: 1.2em;
 	color: black;
 	margin: 0;
@@ -264,7 +274,7 @@ section h1 {
 section p {
 	font-family: "Barlow";
 	font-weight: 400;
-	font-size: clamp(2rem, calc(0.4255vw + 1.86703125rem), 2.25rem);
+	font-size: clamp(1.5rem, calc(1.0714vw + 1.28572rem), 2.25rem);
 	line-height: 1.2em;
 	color: black;
 }
@@ -272,27 +282,31 @@ section p {
 /* ABOUT SECTION */
 
 .about {
-	margin-top: 5rem;
-	padding-top: 15rem;
+	margin-top: 10rem;
+	padding-top: 10rem;
 }
 
 .about p {
-	font-size: clamp(2rem, calc(0.8511vw + 1.73403125rem), 2.5rem);
+	font-size: clamp(1.75rem, calc(1.0714vw + 1.53572rem), 2.5rem);
 }
 
 /* SERVICE SECTION */
 
+.service-text {
+	margin-top: 1.5rem;
+}
+
 .service-text p {
 	font-family: "Barlow";
 	font-weight: 500;
-	font-size: clamp(1.75rem, calc(0.2128vw + 1.6835rem), 1.875rem);
+	font-size: clamp(1.5rem, calc(0.5357vw + 1.39286rem), 1.875rem);
 	line-height: 1.2em;
 	color: #222222;
 	margin: 0.25em 0;
 }
 
 .service-details {
-	margin-top: 7.5rem;
+	margin-top: 6rem;
 	display: grid;
 	justify-content: center;
 	text-align: center;
@@ -330,17 +344,21 @@ section h4 {
 /* HIRE SECTION */
 
 .hire {
-	margin-bottom: 7rem;
+	margin-bottom: 3rem;
 }
 
 .hire h1 {
-	font-size: clamp(3.75rem, calc(1.9149vw + 3.15159375rem), 4.875rem);
+	font-size: clamp(3rem, calc(2.6786vw + 2.46428rem), 4.875rem);
+}
+
+.hire div {
+	text-align: center;
 }
 
 .hire a {
 	font-family: "Barlow";
 	font-weight: 800;
-	font-size: clamp(3rem, calc(1.7021vw + 2.46809375rem), 4rem);
+	font-size: clamp(2.25rem, calc(2.5vw + 1.75rem), 4rem);
 	line-height: 1.2em;
 	letter-spacing: 0.05em;
 	text-transform: capitalize;
@@ -348,7 +366,7 @@ section h4 {
 	text-underline-position: from-font;
 	color: blue;
 	display: inline-block;
-	margin-top: 0.25em;
+	margin-top: 4.5rem;
 }
 
 /* FOOTER */
@@ -379,19 +397,8 @@ footer li {
 	row-gap: 1.5em;
 }
 
-.logo {
-	justify-content: center;
-	display: flex;
-	align-items: center;
-}
-
-.logo p {
-	font-family: "Barlow Semi Condensed";
-	font-weight: 700;
-	font-size: 2.8125rem;
-	line-height: 1.2em;
-	margin-top: 0.65em;
-	margin-bottom: 0.85em;
+footer .logo {
+	display: none;
 }
 
 .social-links ul {
@@ -405,34 +412,34 @@ footer li {
 }
 
 .fab {
-	font-size: 2.25rem;
+	font-size: clamp(1.7rem, calc(0.7857vw + 1.54286rem), 2.25rem);
 	color: #000000e0;
 }
 
 .copyright-text {
 	font-family: "Barlow";
 	font-weight: 500;
-	font-size: 1.25rem;
+	font-size: clamp(0.8125rem, calc(0.625vw + 0.6875rem), 1.25rem);
 	line-height: 1.2em;
 	letter-spacing: 0.05em;
 	color: #000000b2;
 	text-align: center;
 	margin-bottom: -2rem;
-	margin-top: 3rem;
+	margin-top: 2rem;
 }
 
 /* CONTACT SECTION */
 
 .contact-content button,
 .contact-content input,
-.contact-content  textarea {
-  margin: 0;
-  font-family: "Barlow";
-  font-size: inherit;
-  line-height: inherit;
-  border-width: medium;
-  border-color: black;
-  border-radius: 5px;
+.contact-content textarea {
+	margin: 0;
+	font-family: "Barlow";
+	font-size: inherit;
+	line-height: inherit;
+	border-width: medium;
+	border-color: black;
+	border-radius: 5px;
 }
 
 .button_su {
@@ -444,23 +451,23 @@ footer li {
 	-moz-border-radius: 7px;
 	-ms-border-radius: 7px;
 	-o-border-radius: 7px;
-	-webkit-transition-delay: .1s;
-			transition-delay: .1s;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
 	-webkit-transition-duration: 1s;
-			transition-duration: 1s;
-  }
-  
-  .button_su:hover {
+	transition-duration: 1s;
+}
+
+.button_su:hover {
 	-webkit-box-shadow: 0px 0px 38px 0px rgba(0, 0, 255, 0.6);
-			box-shadow: 0px 0px 38px 0px rgba(0, 0, 255, 0.6);
-  }
-  
-  .button_su:hover a {
+	box-shadow: 0px 0px 38px 0px rgba(0, 0, 255, 0.6);
+}
+
+.button_su:hover a {
 	color: #fff;
 	text-decoration: none;
-  }
+}
 
-  .su_button_circle {
+.su_button_circle {
 	background-color: blue;
 	border-radius: 1000px;
 	position: absolute;
@@ -477,12 +484,12 @@ footer li {
 	-moz-border-radius: 1000px;
 	-ms-border-radius: 1000px;
 	-o-border-radius: 1000px;
-  }
-  
-  .button_su_inner {
+}
+
+.button_su_inner {
 	display: inline-block;
 	background: #1827ca;
-	color: #F4F4F4;
+	color: #f4f4f4;
 	font-size: 14px;
 	font-weight: 700;
 	text-align: center;
@@ -492,58 +499,58 @@ footer li {
 	text-decoration: none;
 	padding: 10px 20px;
 	z-index: 10;
-  }
+}
 
-  .button_text_container {
+.button_text_container {
 	position: relative;
 	z-index: 10;
 	color: #fff;
-  }
-  
-  .explode-circle {
+}
+
+.explode-circle {
 	animation: explode 1s forwards;
 	-webkit-animation: explode 1s forwards;
-  }
-  
-  .desplode-circle {
-	animation: desplode .5s forwards;
-	-webkit-animation: desplode .5s forwards;
-  }
+}
 
-  @keyframes explode {
+.desplode-circle {
+	animation: desplode 0.5s forwards;
+	-webkit-animation: desplode 0.5s forwards;
+}
+
+@keyframes explode {
 	0% {
-	  width: 0px;
-	  height: 0px;
-	  margin-left: 0px;
-	  margin-top: 0px;
-	  background-color: blue;
+		width: 0px;
+		height: 0px;
+		margin-left: 0px;
+		margin-top: 0px;
+		background-color: blue;
 	}
 	100% {
-	  width: 400px;
-	  height: 400px;
-	  margin-left: -200px;
-	  margin-top: -200px;
-	  background-color: blue;
+		width: 400px;
+		height: 400px;
+		margin-left: -200px;
+		margin-top: -200px;
+		background-color: blue;
 	}
-  }
-  
-  @keyframes desplode {
+}
+
+@keyframes desplode {
 	0% {
-	  width: 400px;
-	  height: 400px;
-	  margin-left: -200px;
-	  margin-top: -200px;
-	  background-color: blue;
+		width: 400px;
+		height: 400px;
+		margin-left: -200px;
+		margin-top: -200px;
+		background-color: blue;
 	}
 	100% {
-	  width: 0px;
-	  height: 0px;
-	  margin-left: 0px;
-	  margin-top: 0px;
-	  background-color: blue;
+		width: 0px;
+		height: 0px;
+		margin-left: 0px;
+		margin-top: 0px;
+		background-color: blue;
 	}
-  }
-  
+}
+
 .su_button_circle_border {
 	background-color: blue;
 	border-radius: 1000px;
@@ -561,9 +568,9 @@ footer li {
 	-moz-border-radius: 1000px;
 	-ms-border-radius: 1000px;
 	-o-border-radius: 1000px;
-  }
+}
 
-  .button_su_border {
+.button_su_border {
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
@@ -573,23 +580,23 @@ footer li {
 	-ms-border-radius: 20px;
 	-o-border-radius: 20px;
 	border: 1px solid #fff;
-	-webkit-transition-delay: .1s;
-			transition-delay: .1s;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
 	-webkit-transition-duration: 1s;
-			transition-duration: 1s;
+	transition-duration: 1s;
 	margin-bottom: 10px;
-  }
-  
-  .button_su_border:hover {
+}
+
+.button_su_border:hover {
 	border-color: #1827ca;
 	-webkit-box-shadow: 0px 0px 50px 0px rgba(233, 32, 79, 0.6);
-			box-shadow: 0px 0px 50px 0px rgba(233, 32, 79, 0.6);
-  }
-  
-  .button_su_border:hover a {
+	box-shadow: 0px 0px 50px 0px rgba(233, 32, 79, 0.6);
+}
+
+.button_su_border:hover a {
 	color: #fff;
 	text-decoration: none;
-  }
+}
 
 .button_su_inner_border {
 	display: inline-block;
@@ -607,29 +614,29 @@ footer li {
 	-ms-border-radius: 20px;
 	-o-border-radius: 20px;
 	z-index: 10;
-  }
+}
 
-  .button_text_container_border {
+.button_text_container_border {
 	font-family: "Barlow";
 	position: relative;
 	z-index: 10;
-  }
-  
-  .button_text_container_border i {
+}
+
+.button_text_container_border i {
 	margin-top: 13px;
-  }
-  
-  .explode-circle_border {
+}
+
+.explode-circle_border {
 	animation: explode_border 1s forwards;
 	-webkit-animation: explode_border 1s forwards;
-  }
-  
-  .desplode-circle_border {
-	-webkit-animation: desplode_border 0.5s forwards;
-			animation: desplode_border 0.5s forwards;
-  }
+}
 
-  .button_su_service {
+.desplode-circle_border {
+	-webkit-animation: desplode_border 0.5s forwards;
+	animation: desplode_border 0.5s forwards;
+}
+
+.button_su_service {
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
@@ -640,19 +647,19 @@ footer li {
 	-o-border-radius: 20px;
 	background: #111111;
 	-webkit-transition-duration: 1s;
-			transition-duration: 1s;
+	transition-duration: 1s;
 	margin-top: 30px;
-  }
-  
-  .button_su_service:hover p {
+}
+
+.button_su_service:hover p {
 	color: #fff;
-  }
-  
-  .button_su_service:hover h3 {
+}
+
+.button_su_service:hover h3 {
 	color: #fff;
-  }
-  
-  .su_button_circle_service {
+}
+
+.su_button_circle_service {
 	background-color: blue;
 	border-radius: 1000px;
 	position: absolute;
@@ -669,12 +676,12 @@ footer li {
 	-moz-border-radius: 1000px;
 	-ms-border-radius: 1000px;
 	-o-border-radius: 1000px;
-  }
-  
-  .button_su_inner_service {
+}
+
+.button_su_inner_service {
 	display: inline-block;
 	padding: 20px 30px;
-	color: #F4F4F4;
+	color: #f4f4f4;
 	font-size: 14px;
 	text-align: center;
 	-webkit-transition: 400ms;
@@ -686,50 +693,50 @@ footer li {
 	-ms-border-radius: 20px;
 	-o-border-radius: 20px;
 	z-index: 10;
-  }
-  
-  .button_text_container_service {
+}
+
+.button_text_container_service {
 	position: relative;
 	z-index: 10;
-  }
-  
-  .button_text_container_service i {
+}
+
+.button_text_container_service i {
 	margin-top: 13px;
-  }
-  
-  @keyframes explode_border {
+}
+
+@keyframes explode_border {
 	0% {
-	  width: 0px;
-	  height: 0px;
-	  margin-left: 0px;
-	  margin-top: 0px;
-	  background-color: #1827ca;
+		width: 0px;
+		height: 0px;
+		margin-left: 0px;
+		margin-top: 0px;
+		background-color: #1827ca;
 	}
 	100% {
-	  width: 600px;
-	  height: 600px;
-	  margin-left: -300px;
-	  margin-top: -300px;
-	  background-color: #1827ca;
+		width: 600px;
+		height: 600px;
+		margin-left: -300px;
+		margin-top: -300px;
+		background-color: #1827ca;
 	}
-  }
-  
-  @keyframes desplode_border {
+}
+
+@keyframes desplode_border {
 	0% {
-	  width: 600px;
-	  height: 600px;
-	  margin-left: -300px;
-	  margin-top: -300px;
-	  background-color: #1827ca;
+		width: 600px;
+		height: 600px;
+		margin-left: -300px;
+		margin-top: -300px;
+		background-color: #1827ca;
 	}
 	100% {
-	  width: 0px;
-	  height: 0px;
-	  margin-left: 0px;
-	  margin-top: 0px;
-	  background-color: #1827ca;
+		width: 0px;
+		height: 0px;
+		margin-left: 0px;
+		margin-top: 0px;
+		background-color: #1827ca;
 	}
-  }
+}
 
 .contact-content {
 	margin-top: 0;
@@ -852,7 +859,7 @@ input[type="checkbox"]:not(checked)
 .form-second label {
 	font-family: "Barlow";
 	font-weight: 400;
-	margin-bottom: 0.25rem ;
+	margin-bottom: 0.25rem;
 	display: inline-block;
 	padding: 24px 0px 8px 0px;
 	font-size: 24px;
@@ -986,8 +993,13 @@ input[type="checkbox"]:not(checked)
 	}
 }
 
-
 @media only screen and (min-width: 750px) {
+
+	.about {
+		margin-top: 5rem;
+		padding-top: 15rem;
+	}
+	
 	.service-details {
 		grid-template-columns: repeat(3, auto);
 		justify-content: space-around;
@@ -1005,6 +1017,11 @@ input[type="checkbox"]:not(checked)
 
 	.hire {
 		text-align: center;
+		margin: 20.25rem auto 6.875rem;
+	}
+
+	.hire a {
+		margin-top: 0.75rem;
 	}
 
 	.social-links ul {
@@ -1023,6 +1040,7 @@ input[type="checkbox"]:not(checked)
 @media only screen and (min-width: 950px) {
 	.container {
 		padding: 3.125rem 11.458vw 4.25rem;
+		overflow: hidden;
 	}
 
 	/* HEADER */
@@ -1069,6 +1087,11 @@ input[type="checkbox"]:not(checked)
 
 	/* FIRST SECTION */
 
+	.content {
+		display: flex;
+		align-items: center;
+	}
+
 	.text {
 		position: absolute;
 		width: 55.4054%;
@@ -1077,13 +1100,13 @@ input[type="checkbox"]:not(checked)
 
 	.model-container {
 		position: absolute;
-		left: 56.256%;
-		
+		left: 47%;
+		margin: -20rem auto 0;
 	}
 
 	.home-animation {
-		height: 50vw;
-		width: 50vw;
+		height: 36vw;
+		width: 59vw;
 	}
 
 	.cta {
@@ -1158,9 +1181,7 @@ input[type="checkbox"]:not(checked)
 
 	/* HIRE SECTION */
 
-	.hire {
-		margin: 20.25rem auto 6.875rem;
-	}
+	
 
 	/* FOOTER */
 
@@ -1175,8 +1196,23 @@ input[type="checkbox"]:not(checked)
 		align-items: center;
 	}
 
-	.logo img {
+	footer .logo {
+		justify-content: center;
+		display: flex;
+		align-items: center;
+	}
+
+	footer .logo img {
 		margin-left: -1.25rem;
+	}
+
+		footer .logo p {
+		font-family: "Barlow Semi Condensed";
+		font-weight: 700;
+		font-size: 2.8125rem;
+		line-height: 1.2em;
+		margin-top: 0.65em;
+		margin-bottom: 0.85em;
 	}
 
 	.social-links ul li {
@@ -1187,7 +1223,7 @@ input[type="checkbox"]:not(checked)
 	.social-links ul li:last-of-type {
 		margin-right: 0.7639vw;
 	}
-
+	
 	.copyright-text p {
 		margin: 2.21875rem 0 0;
 	}
