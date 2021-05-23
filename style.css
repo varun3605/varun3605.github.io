@@ -95,6 +95,10 @@ nav ul {
 	margin: auto;
 }
 
+nav ul li:last-of-type {
+	margin: 1.25rem 0 0;
+}
+
 nav ul li:not(nav ul li:last-of-type) {
 	padding: 0;
 	margin: 0.9375rem;
@@ -102,7 +106,7 @@ nav ul li:not(nav ul li:last-of-type) {
 	display: flex;
 	align-items: center;
 	overflow: hidden;
-	height: 24px;
+	height: 30px;
 	cursor: pointer;
 }
 
@@ -112,14 +116,14 @@ nav ul li a {
 	color: black;
 	font-family: "Barlow";
 	font-weight: 700;
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 nav ul li a::after {
 	content: attr(data-link);
 	position: absolute;
 	left: 0;
-	top: 50px;
+	top: 50.5px;
 	color: blue;
 }
 
@@ -852,7 +856,8 @@ input[type="checkbox"]:not(checked)
 
 .form-first-content {
 	padding: 24px 0px 0px 0px;
-	width: 78%;
+	width: 100%;
+	max-width: 930px;
 }
 
 .form-second label {
@@ -867,7 +872,7 @@ input[type="checkbox"]:not(checked)
 
 .form-second input {
 	padding: 8px;
-	width: 67%;
+	width: 100%;
 	border-width: medium;
 	border-color: black;
 	border-radius: 5px;
@@ -875,7 +880,7 @@ input[type="checkbox"]:not(checked)
 
 .form-second textarea {
 	padding: 8px 8px 0px 8px;
-	width: 67%;
+	width: 100%;
 }
 
 .form-third-heading {
@@ -1026,6 +1031,10 @@ input[type="checkbox"]:not(checked)
 	.social-links ul {
 		justify-content: space-evenly;
 	}
+
+	.form-second input, .form-second textarea {
+		width: 85%;
+	}
 }
 
 @media only screen and (min-width: 885px) {
@@ -1070,6 +1079,7 @@ input[type="checkbox"]:not(checked)
 
 	nav ul li:last-of-type {
 		padding-right: 0;
+		margin: 0;
 	}
 
 	nav ul li {
@@ -1078,6 +1088,14 @@ input[type="checkbox"]:not(checked)
 
 	nav ul li a {
 		font-size: 1.125rem;
+	}
+
+	nav ul li:not(nav ul li:last-of-type) {
+		height: 24px;
+	}
+
+	nav ul li a::after {
+		top: 49.5px;
 	}
 
 	nav ul li:hover a::after {
@@ -1225,5 +1243,9 @@ input[type="checkbox"]:not(checked)
 	
 	.copyright-text p {
 		margin: 2.21875rem 0 0;
+	}
+
+	.form-second input, .form-second textarea {
+		width: 67%;
 	}
 }
