@@ -9,6 +9,10 @@ body {
 	padding: 0;
 }
 
+/* ::selection {
+	background: #FDF4AA;
+} */
+
 .container {
 	padding: 2rem;
 	overflow: auto;
