@@ -1,18 +1,15 @@
-var menuBtn = document.querySelector(".menu-btn");
-line1 = document.querySelector(".line-1");
-line2 = document.querySelector(".line-2");
-line3 = document.querySelector(".line-3");
-navBar = document.querySelector("nav");
-header = document.querySelector("header");
-var url = window.location.href;
+var menuBtn = document.querySelector(".menu-btn"),
+	navBar = document.querySelector("nav"),
+	header = document.querySelector("header"),
+	url = window.location.href;
 
 menuBtn.addEventListener("click", () => {
 	closeMobileNav();
 });
 
-$("nav ul li a").each(function(){
-	if(this.href === url) {
-		$(this).addClass('active');
+$("nav ul li a").each(function () {
+	if (this.href === url || this.href === url + "#home") {
+		$(this).addClass("active");
 	}
 });
 
@@ -30,72 +27,49 @@ $("nav ul li")
 			.end()
 			.end()
 			.addClass("active");
-
-		$("html,body").animate({
-			scrollTop: $anchor.top,
-		});
+		if ($href == "#home") {
+			$("html,body").animate({
+				scrollTop: 0,
+			});
+		} else {
+			$("html,body").animate({
+				scrollTop: $anchor.top,
+			});
+		}
 		return false;
 	});
+
+var headerHeight = $("header").outerHeight() + 11,
+	scrollItems = $("nav")
+		.find("a[href*='#']")
+		.map(function () {
+			var $href = $(this).attr("href");
+			var item = $($href);
+			if (item.length) {
+				return item;
+			}
+		});
+$(window).scroll(function () {
+	var fromTop = $(this).scrollTop() + headerHeight;
+	var cur = scrollItems.map(function () {
+		if ($(this).offset().top < fromTop) {
+			return this;
+		}
+	});
+	cur = cur[cur.length - 1];
+	var id = cur && cur.length ? cur[0].id : "";
+	$("nav")
+		.find("a")
+		.removeClass("active")
+		.filter("[href='#" + id + "']")
+		.addClass("active");
+});
 
 function closeMobileNav() {
 	menuBtn.classList.toggle("close");
 	navBar.classList.toggle("open");
 	header.classList.toggle("white-bg");
 }
-
-$(".button_su_inner").mouseenter(function (e) {
-	var parentOffset = $(this).offset();
-
-	var relX = e.pageX - parentOffset.left;
-	var relY = e.pageY - parentOffset.top;
-	$(this).prev(".su_button_circle").css({
-		left: relX,
-		top: relY,
-	});
-	$(this).prev(".su_button_circle").removeClass("desplode-circle");
-	$(this).prev(".su_button_circle").addClass("explode-circle");
-});
-
-$(".button_su_inner").mouseleave(function (e) {
-	var parentOffset = $(this).offset();
-
-	var relX = e.pageX - parentOffset.left;
-	var relY = e.pageY - parentOffset.top;
-	$(this).prev(".su_button_circle").css({
-		left: relX,
-		top: relY,
-	});
-	$(this).prev(".su_button_circle").removeClass("explode-circle");
-	$(this).prev(".su_button_circle").addClass("desplode-circle");
-});
-
-$(".button_su_inner_border").mouseenter(function (e) {
-	var parentOffset = $(this).offset();
-
-	var relX = e.pageX - parentOffset.left;
-	var relY = e.pageY - parentOffset.top;
-	$(this).prev(".su_button_circle_border").css({
-		left: relX,
-		top: relY,
-	});
-	$(this)
-		.prev(".su_button_circle_border")
-		.removeClass("desplode-circle_border");
-	$(this).prev(".su_button_circle_border").addClass("explode-circle_border");
-});
-
-$(".button_su_inner_border").mouseleave(function (e) {
-	var parentOffset = $(this).offset();
-
-	var relX = e.pageX - parentOffset.left;
-	var relY = e.pageY - parentOffset.top;
-	$(this).prev(".su_button_circle_border").css({
-		left: relX,
-		top: relY,
-	});
-	$(this).prev(".su_button_circle_border").removeClass("explode-circle_border");
-	$(this).prev(".su_button_circle_border").addClass("desplode-circle_border");
-});
 
 //--------------------------------------------------
 //Home Animated Text
